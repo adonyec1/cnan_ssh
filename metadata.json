@@ -1,0 +1,15 @@
+{
+  "name": "cnan-ssh",
+  "version": "0.1.0",
+  "author": "cnan",
+  "summary": "This module will manage ssh",
+  "license": "Apache-2.0",
+  "source": "https://github.com/adonyec1/cnan_ssh",
+  "project_page": "https://github.com/adonyec1/cnan_ssh",
+  "issues_url": "https://github.com/adonyec1/cnan_ssh/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
