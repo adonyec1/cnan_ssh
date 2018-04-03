@@ -10,9 +10,16 @@ class ssh::params {
 # else {
 #   fail("${facts['operatingsystem']} is not supported!!!")
 # }
-#  case $facts['os']['family'] {
- #  case $::osfamily {
 
+#unless $facts['os']['family'] == 'Debian' {
+#    $package_name = 'openssh-server'
+#    $service_name = 'sshd'
+#    notify{ "${0} is our operating system!": }
+#  }
+
+
+#  case $facts['os']['family'] {
+#  case $::osfamily {
 
    $permit_root_login = false
    $port = 22
@@ -25,7 +32,7 @@ class ssh::params {
     /^RedHat|CentOS/: {
        $package_name = 'openssh-server'
        $service_name = 'sshd'
-       #notify{ "${0} is our operating system!": }
+       notify{ "${0} is our operating system!": }
     }
     default: {
       fail("${facts['operatingsystem']} is not supported!!!")
